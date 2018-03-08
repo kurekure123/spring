@@ -1,0 +1,34 @@
+package com.bitcamp.web.mapperImpl;
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import com.bitcamp.web.command.Command;
+import com.bitcamp.web.command.ResultMap;
+import com.bitcamp.web.domain.MobileDTO;
+import com.bitcamp.web.mapper.MobileMapper;
+
+@Repository
+public class MobileMapperImpl implements MobileMapper{
+
+	@Override
+	public ResultMap openPhone(Command cmd) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ResultMap findMobileById(Command cmd) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<MobileDTO> list() {
+		// TODO Auto-generated method stub
+		return null;
+		// sqlSession.selectList("list");
+	}
+
+}

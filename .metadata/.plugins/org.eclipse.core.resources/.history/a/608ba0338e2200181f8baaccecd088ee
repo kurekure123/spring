@@ -1,0 +1,11 @@
+package com.bitcamp.web.serviceImpl;
+
+import java.util.List;
+
+import com.bitcamp.web.command.Command;
+import com.bitcamp.web.domain.AccountDTO;
+import com.bitcamp.web.service.AccountService;
+
+public class AdminServiceImpl implements AccountService {
+
+}

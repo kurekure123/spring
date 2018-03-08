@@ -1,0 +1,53 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<head>
+  <meta charset="UTF-8" />
+ <h1>마이페이지</h1>
+</head>
+<body>
+<article>
+</article>
+<script src = "${path.js}/jquery-3.3.1.min.js"></script>
+<table id = "mypage_table">
+<tr id ="mypage_table tr">
+  <td rowspan="5"><img src=""
+              id = "img" alt="" />  </td>
+  <td class="title">ID</td>
+  <td>${user.id}</td>
+  <td>PW</td>
+  <td>${user.pass}</td>
+</tr>
+<tr>
+  <td class="title">NAME</td>
+  <td>${user.name}</td>
+  <td>GENDER</td>
+  <td>${user.gender}</td>
+</tr>
+<tr>
+  <td class="title">BIRTH</td>
+  <td></td>
+  <td>E-MAIL</td>
+  <td></td>
+</tr>
+<tr>
+  <td class="title">PHONE</td>
+  <td></td>
+  <td>ADDRESS</td>
+  <td></td>
+</tr>
+<tr>
+  <td class="title" >ACCOUNT</td>
+  <td ></td>
+  <td>D-A-T-E</td>
+  <td></td>
+</tr>
+</table>
+<button id = "btn-change_pass">비번 변경</button>
+<button id = "btn-delete_btn">회원 탈퇴</button>
+<button id = "btn-change">수정</button>
+<button id = "btn-logout">로그아웃</button>
+<script>
+$('#btn-logout').on('click', function(){
+	  alert("클릭 인식됨.");
+	  location.href = '${path.context}/logout';
+	});
+</script>

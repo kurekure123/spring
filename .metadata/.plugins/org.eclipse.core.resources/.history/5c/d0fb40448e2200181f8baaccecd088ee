@@ -1,0 +1,53 @@
+package com.bitcamp.web.serviceImpl;
+
+import java.util.List;
+
+import com.bitcamp.web.command.Command;
+import com.bitcamp.web.domain.AccountDTO;
+import com.bitcamp.web.service.AccountService;
+
+public class AdminServiceImpl implements admin {
+
+	@Override
+	public void addAccount(Command cmd) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateAccount(Command cmd) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteAccount(Command cmd) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<AccountDTO> list(Command cmd) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<AccountDTO> selectByAccount(Command cmd) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public AccountDTO selectById(Command cmd) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int count() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

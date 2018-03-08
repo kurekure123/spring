@@ -1,0 +1,61 @@
+package com.bitcamp.web.mapperImpl;
+
+import java.util.List;
+
+import org.mybatis.spring.SqlSessionTemplate;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.bitcamp.web.command.Command;
+import com.bitcamp.web.domain.TxDTO;
+import com.bitcamp.web.mapper.TxMapper;
+
+@Repository
+public class TxMapperImpl implements TxMapper{
+	private static final Logger logger = LoggerFactory.getLogger(TxMapperImpl.class);
+	@Autowired SqlSessionTemplate sqlSession;
+
+	@Override
+	public void insertTx(Command cmd) {
+		logger.info("TxMapperImpl() SETTING ID is {}", cmd);
+		sqlSession.insert("insertUserPhone", cmd);
+	}
+
+	@Override
+	public void updateTx(Command cmd) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteTx(Command cmd) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<TxDTO> list(Command cmd) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<TxDTO> selectByTx(Command cmd) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public TxDTO selectById(Command cmd) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int count() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}

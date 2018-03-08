@@ -1,0 +1,13 @@
+package com.bitcamp.web.mapperImpl;
+
+import com.bitcamp.web.command.Command;
+import com.bitcamp.web.mapper.UserPhoneMapper;
+
+public class UserPhoneMapperImpl implements UserPhoneMapper{
+
+	@Override
+	public void insertUserPhone(Command cmd) {
+		
+	}
+
+}

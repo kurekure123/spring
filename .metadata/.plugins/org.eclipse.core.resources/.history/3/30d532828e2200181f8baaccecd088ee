@@ -1,0 +1,16 @@
+package com.bitcamp.web.service;
+
+import java.util.List;
+
+import com.bitcamp.web.command.Command;
+import com.bitcamp.web.domain.AdiminDTO;
+
+public interface BoardService {
+	public void addBoard (Command cmd);
+	public void ModifyBoard(Command cmd);
+	public void removeBoard(Command cmd);
+	public List<AdiminDTO> list(Command cmd);
+	public List<AdiminDTO> findByBoard(Command cmd); // not pk
+	public AdiminDTO findById(Command cmd); // pk
+	public int count();
+}

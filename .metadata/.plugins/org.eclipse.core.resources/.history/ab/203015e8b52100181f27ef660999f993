@@ -1,0 +1,14 @@
+package com.bitcamp.web.mapperImpl;
+
+import com.bitcamp.web.command.Command;
+import com.bitcamp.web.mapper.MobileMapper;
+
+public class PhoneMapperImpl implements MobileMapper{
+
+	@Override
+	public void openPhone(Command cmd) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

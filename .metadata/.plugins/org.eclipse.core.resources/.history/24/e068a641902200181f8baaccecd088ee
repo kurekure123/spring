@@ -1,0 +1,46 @@
+package com.bitcamp.web.serviceImpl;
+
+import java.util.Random;
+
+import org.mybatis.spring.SqlSessionTemplate;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.bitcamp.web.command.Command;
+import com.bitcamp.web.mapper.TxMapper;
+import com.bitcamp.web.service.TxService;
+
+@Service
+public class TxServiceImpl implements TxService{
+	private static final Logger logger = LoggerFactory.getLogger(TxServiceImpl.class);
+	@Autowired SqlSessionTemplate sqlSession;
+	@Autowired TxMapper mapper;
+	
+	@Override
+	public void openPhone(Command cmd) {
+		mapper.insertUserPhone(cmd);
+		
+	}
+
+	@Override
+	public String createPhoneNum(Command cmd) {
+		Number[] num = new Number[8];
+	    String res = "";
+	    Random x = new Random();
+	    int flag =0;
+	    for(int i=0; i<8; i++) {
+	      if(flag==3) {
+	        num[i] = x.nextInt(10);
+	        res += num[i] +"-";
+	        flag++;
+	      } else {
+	        num[i] = x.nextInt(10);
+	        res += num[i];
+	        flag++;
+	      }
+	    }
+	    return "010-"+res;
+	}
+}

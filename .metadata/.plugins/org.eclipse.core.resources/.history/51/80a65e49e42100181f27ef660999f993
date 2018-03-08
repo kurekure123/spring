@@ -1,0 +1,49 @@
+package com.bitcamp.web.controller;
+
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
+
+import com.bitcamp.web.domain.MemberDTO;
+import com.bitcamp.web.domain.MobileDTO;
+import com.bitcamp.web.factory.ShiftFactory;
+import com.bitcamp.web.service.MobileService;
+
+@Controller
+@SessionAttributes("user")
+public class PhoneController {
+	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+	@Autowired ShiftFactory shift;
+	@Autowired MobileDTO phone; 
+	@Autowired MobileService mService;
+	
+	@RequestMapping("/mobile/open")
+	public String phone(Model model){
+		List<MobileDTO> phones = mService.phones();
+		model.addAttribute("phones", phones);
+		logger.info("PhoneController phonenav() : {} ", "ENTERED");
+		return shift.create("mobile", "main");
+	}
+	
+	 @RequestMapping(value="/mobile/open", method=RequestMethod.POST)
+	  public String openPhone(Model model,
+	      @RequestParam("seq") String seq,
+	      @RequestParam("telecom") String telecom,
+	      @ModelAttribute("user") MemberDTO member) {
+	    logger.info("phoneSeq {}", seq);
+	    logger.info("telecom {}", telecom);
+	    String id = member.getId();
+	    String phoneid = id + seq;
+	    logger.info("phoneSeq {}", id + seq);
+	    return "";
+	 }
+}

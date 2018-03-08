@@ -1,0 +1,11 @@
+package com.bitcamp.web.factory;
+
+public class ShiftFactory extends Factory{
+
+	@Override
+	public Object create() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

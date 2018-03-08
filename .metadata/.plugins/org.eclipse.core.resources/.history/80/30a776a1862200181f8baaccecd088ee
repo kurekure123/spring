@@ -1,0 +1,13 @@
+package com.bitcamp.web.service;
+
+import org.springframework.stereotype.Component;
+
+import com.bitcamp.web.command.Command;
+import com.bitcamp.web.command.ResultMap;
+
+@Component
+public interface AccountService {
+
+	public ResultMap openAccount(Command cmd);
+	public ResultMap findAccountById(Command cmd);
+}

@@ -1,0 +1,7 @@
+package com.bitcamp.web.mapper;
+
+import com.bitcamp.web.command.Command;
+
+public interface MobileMapper {
+	public void openPhone(Command cmd);
+}

@@ -1,0 +1,22 @@
+package com.bitcamp.web.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Component;
+
+import com.bitcamp.web.command.Command;
+import com.bitcamp.web.domain.AdiminDTO;
+
+
+@Component
+public interface AdminService {
+
+	public void addAccount (Command cmd);
+	public void updateAccount(Command cmd);
+	public void deleteAccount(Command cmd);
+	public List<AdiminDTO> list(Command cmd);
+	public List<AdiminDTO> selectByAccount(Command cmd); // not pk
+	public AdiminDTO selectById(Command cmd); // pk
+	public int count();
+
+}

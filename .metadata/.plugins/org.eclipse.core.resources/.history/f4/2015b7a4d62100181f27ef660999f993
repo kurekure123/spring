@@ -1,0 +1,53 @@
+package com.bitcamp.web.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.bitcamp.web.domain.MobileDTO;
+import com.bitcamp.web.factory.ShiftFactory;
+import com.bitcamp.web.service.MobileService;
+
+@Controller
+public class PhoneController {
+	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+	@Autowired ShiftFactory shift;
+	@Autowired MobileDTO phone; 
+	@Autowired MobileService mService;
+	
+	@RequestMapping("/mobile/open")
+	public String phone(Model model){
+		List<MobileDTO> phones = mService.phones();
+		/*String[] models = {"알쥐6", "걘역시 노트8", "걘역시9", "소닉", "아이뻐8", "아이뻐x"};
+		String[] thumbnails = {"g6", "note8", "galaxy9", "sony", "iphone8", "iphonex"};*/
+		
+		
+		/*for (int i = 0; i < thumbnails.length; i++) {
+			phone =new MobileDTO();
+			phone.setThumbnail(thumbnails[i]);
+			phone.setModel(models[i]);
+			phones.add(phone);
+		}*/
+
+		model.addAttribute("phones", phones);
+		logger.info("PhoneController nav() : {} ", "ENTERED");
+		return shift.create("mobile", "main");
+	}
+	
+	 @RequestMapping(value="/phone/open", method=RequestMethod.POST)
+	  public String openPhone(Model model,
+	      @RequestParam("seq") String seq,
+	      @RequestParam("telecom") String telecom) {
+	    logger.info("phoneSeq {}", seq);
+	    logger.info("telecom {}", telecom);
+	    return "";
+	 }
+}

@@ -1,0 +1,13 @@
+package com.bitcamp.web.mapper;
+
+import com.bitcamp.web.command.Command;
+import com.bitcamp.web.command.ResultMap;
+
+public interface MemberMapper {
+	public ResultMap  insert(Command cmd);
+	public ResultMap  selectById(Command cmd);
+	public ResultMap  login(Command cmd);
+	public ResultMap  deleteMember(Command cmd);
+	
+
+}

@@ -1,0 +1,51 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<style>
+  .container {
+    margin-top: 150px;
+  }
+</style>
+<div class="container">
+  <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title" style="text-align: left;">로그인 페이지 입니다.</h3>
+                </div>
+                <div class="panel-body" style="padding: 30px;">
+                    <form role="form">
+                        <fieldset>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input id="input-id" class="form-control" placeholder="Id를 입력하세요.." name="email" type="email" autofocus>
+                            </div>
+                            <br />
+                            <div class="input-group">
+                              <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <input id="input-password" class="form-control" placeholder="Password를 입력하세요." name="password" type="password" value="">
+                            </div>
+                            <br />
+                            <button id="login-btn" type="button" class="btn btn-success btn-block">Login</button>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="panel-footer">
+                    <p>New Member?&nbsp;&nbsp;
+                    <button id="btn-join" class="btn btn-danger btn-sm">Sign up</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
+<script>
+$('#login-btn').on('click', function(){
+  alert("클릭 인식됨.");
+  var id = $('#input-id').val();
+  var password = $('#input-password').val();
+  location.href = '${path.context}/login/'+id+'/'+password;
+});
+$('#btn-join').on('click', function(){
+	  alert("클릭 인식됨.");
+	  location.href = '${path.context}/move/user/join';
+	});
+</script>
+</html>

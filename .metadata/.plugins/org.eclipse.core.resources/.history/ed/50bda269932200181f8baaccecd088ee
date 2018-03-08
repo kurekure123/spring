@@ -1,0 +1,20 @@
+package com.bitcamp.web.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Component;
+
+import com.bitcamp.web.command.Command;
+import com.bitcamp.web.domain.TxDTO;
+
+@Component
+public interface TxService {
+	public void  addTx(Command cmd);
+	public void ModifyTx(Command cmd);
+	public void removeTx(Command cmd);
+	public List<TxDTO> list(Command cmd);
+	public List<TxDTO> findByTx(Command cmd); // not pk
+	public TxDTO  findById(Command cmd); // pk
+	public int count();
+	public String createPhoneNum(Command cmd);
+}

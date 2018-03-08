@@ -1,0 +1,30 @@
+package com.bitcamp.web.serviceImpl;
+
+import java.util.List;
+
+import com.bitcamp.web.command.Command;
+import com.bitcamp.web.command.ResultMap;
+import com.bitcamp.web.domain.MobileDTO;
+import com.bitcamp.web.service.MobileService;
+
+public class MobileServiceImple implements MobileService{
+
+	@Override
+	public ResultMap openPhone(Command cmd) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ResultMap findMobileById(Command cmd) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<MobileDTO> phones() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

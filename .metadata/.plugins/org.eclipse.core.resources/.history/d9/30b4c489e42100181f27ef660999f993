@@ -1,0 +1,12 @@
+package com.bitcamp.web.serviceImpl;
+
+import com.bitcamp.web.service.UserPhoneService;
+
+public class UserPhoneServiceImpl implements UserPhoneService{
+
+	@Override
+	public void openPhone() {
+		
+	}
+
+}

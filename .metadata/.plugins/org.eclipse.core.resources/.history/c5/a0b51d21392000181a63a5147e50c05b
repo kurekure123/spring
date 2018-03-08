@@ -1,0 +1,33 @@
+package com.bitcamp.web.serviceImpl;
+
+import com.bitcamp.web.command.Command;
+import com.bitcamp.web.command.ResultMap;
+import com.bitcamp.web.service.MemberService;
+
+public class MemberServiceImpl implements MemberService{
+
+	@Override
+	public ResultMap addMember(Command cmd) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ResultMap findMemberById(Command cmd) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ResultMap login(Command cmd) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ResultMap deleteMember(Command cmd) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,25 @@
+package com.bitcamp.web.serviceImpl;
+
+import org.mybatis.spring.SqlSessionTemplate;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.bitcamp.web.command.Command;
+import com.bitcamp.web.controller.UserController;
+import com.bitcamp.web.mapper.UserPhoneMapper;
+import com.bitcamp.web.service.UserPhoneService;
+
+@Service
+public class UserPhoneServiceImpl implements UserPhoneService{
+	private static final Logger logger = LoggerFactory.getLogger(UserPhoneServiceImpl.class);
+	@Autowired SqlSessionTemplate sqlSession;
+	@Autowired UserPhoneMapper mapper;
+	
+	@Override
+	public void openPhone(Command cmd) {
+		mapper.insertUserPhone(cmd);
+	}
+
+}

@@ -1,0 +1,7 @@
+package com.bitcamp.web.serviceImpl;
+
+import com.bitcamp.web.service.MobileService;
+
+public class MobileServiceImple implements MobileService{
+
+}

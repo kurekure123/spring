@@ -1,0 +1,15 @@
+package com.bitcamp.web.service;
+
+import java.util.List;
+
+import com.bitcamp.web.command.Command;
+import com.bitcamp.web.command.ResultMap;
+import com.bitcamp.web.domain.MobileDTO;
+
+public interface MobileService {
+
+	public ResultMap openPhone(Command cmd);
+	public ResultMap findMobileById(Command cmd);
+	public List<MobileDTO> phones();
+
+}

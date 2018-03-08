@@ -1,0 +1,7 @@
+package com.bitcamp.web.mapperImpl;
+
+import com.bitcamp.web.mapper.PhoneMapper;
+
+public class PhoneMapperImpl implements PhoneMapper{
+
+}

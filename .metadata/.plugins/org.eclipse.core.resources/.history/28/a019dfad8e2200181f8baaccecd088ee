@@ -1,0 +1,10 @@
+package com.bitcamp.web.serviceImpl;
+
+import org.springframework.stereotype.Service;
+
+import com.bitcamp.web.service.FoodService;
+
+@Service
+public class FoodServiceImpl implements FoodService{
+
+}

@@ -1,0 +1,24 @@
+package com.bitcamp.web.serviceImpl;
+
+import org.springframework.stereotype.Service;
+
+import com.bitcamp.web.command.Command;
+import com.bitcamp.web.command.ResultMap;
+import com.bitcamp.web.service.AccountService;
+
+@Service
+public class AccountServiceImpl implements AccountService{
+
+	@Override
+	public ResultMap openAccount(Command cmd) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ResultMap findAccountById(Command cmd) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

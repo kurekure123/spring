@@ -1,0 +1,14 @@
+package com.bitcamp.web.service;
+
+import com.bitcamp.web.command.Command;
+import com.bitcamp.web.command.ResultMap;
+import com.bitcamp.web.domain.MemberDTO;
+
+public interface MemberService {
+	public void  addMember(Command cmd);
+	public MemberDTO  findMemberById(Command cmd);
+	public MemberDTO  login(Command cmd);
+	public void  deleteMember(Command cmd);
+	
+
+}

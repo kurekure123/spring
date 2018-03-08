@@ -1,0 +1,42 @@
+package com.bitcamp.web.mapperImpl;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Repository;
+
+import com.bitcamp.web.command.Command;
+import com.bitcamp.web.command.ResultMap;
+import com.bitcamp.web.domain.MemberDTO;
+import com.bitcamp.web.mapper.MemberMapper;
+import com.bitcamp.web.serviceImpl.MemberServiceImpl;
+
+@Repository
+public class MemberMapperImpl implements MemberMapper{
+	private static final Logger logger = LoggerFactory.getLogger(MemberMapperImpl.class);
+	
+	@Override
+	public void insertMember(Command cmd) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public MemberDTO selectMemberById(Command cmd) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public MemberDTO login(Command cmd) {
+		 logger.info("MemberMapper() ID is {}", cmd.getMember().getId());
+		 logger.info("MemberMapper() is {}", cmd.getMember().getPass());
+		return null;
+	}
+
+	@Override
+	public void deleteMember(Command cmd) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
